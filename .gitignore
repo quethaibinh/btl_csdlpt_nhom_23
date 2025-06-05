@@ -1,0 +1,2 @@
+# Ignore large data files
+ml-10m/ml-10M100K/ratings.dat
