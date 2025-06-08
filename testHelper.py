@@ -135,6 +135,7 @@ def testrangerobininsert(expectedtablename, itemid, openconnection, rating, user
                                                                                           MOVIE_ID_COLNAME,
                                                                                           RATING_COLNAME))
         count = int(cur.fetchone()[0])
+        # print(count)
         if count != 1:  return False
         return True
 

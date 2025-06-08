@@ -41,22 +41,22 @@ if __name__ == '__main__':
             else:
                 print("loadratings function fail!")
 
-            # [result, e] = testHelper.testrangepartition(range, RATINGS_TABLE, 5, conn, 0, ACTUAL_ROWS_IN_INPUT_FILE)
-            # if result :
-            #     print("rangepartition function pass!")
-            # else:
-            #     print("rangepartition function fail!")
+            [result, e] = testHelper.testrangepartition(range, RATINGS_TABLE, 5, conn, 0, ACTUAL_ROWS_IN_INPUT_FILE)
+            if result :
+                print("rangepartition function pass!")
+            else:
+                print("rangepartition function fail!")
 
-            # # ALERT:: Use only one at a time i.e. uncomment only one line at a time and run the script
-            # # [result, e] = testHelper.testrangeinsert(range, RATINGS_TABLE, 100, 2, 3, conn, '2')
+            # ALERT:: Use only one at a time i.e. uncomment only one line at a time and run the script
+            [result, e] = testHelper.testrangeinsert(range, RATINGS_TABLE, 100, 2, 3, conn, '2')
             # [result, e] = testHelper.testrangeinsert(range, RATINGS_TABLE, 100, 2, 0, conn, '0')
-            # if result:
-            #     print("rangeinsert function pass!")
-            # else:
-            #     print("rangeinsert function fail!")
+            if result:
+                print("rangeinsert function pass!")
+            else:
+                print("rangeinsert function fail!")
 
-            # testHelper.deleteAllPublicTables(conn)
-            # LoadRating.loadratings(RATINGS_TABLE, INPUT_FILE_PATH, conn)
+            testHelper.deleteAllPublicTables(conn)
+            LoadRating.loadratings(RATINGS_TABLE, INPUT_FILE_PATH, conn)
 
             [result, e] = testHelper.testroundrobinpartition(roundRobin, RATINGS_TABLE, 5, conn, 0, ACTUAL_ROWS_IN_INPUT_FILE)
             if result :
@@ -66,8 +66,9 @@ if __name__ == '__main__':
 
             # ALERT:: Change the partition index according to your testing sequence.
             # [result, e] = testHelper.testroundrobininsert(roundRobin, RATINGS_TABLE, 100, 1, 3, conn, '0')
-            [result, e] = testHelper.testroundrobininsert(roundRobin, RATINGS_TABLE, 100, 1, 3, conn, '1')
+            # [result, e] = testHelper.testroundrobininsert(roundRobin, RATINGS_TABLE, 100, 1, 3, conn, '1')
             # [result, e] = testHelper.testroundrobininsert(roundRobin, RATINGS_TABLE, 100, 1, 3, conn, '2')
+            [result, e] = testHelper.testroundrobininsert(roundRobin, RATINGS_TABLE, 100, 1, 3, conn, '4')
             if result :
                 print("roundrobininsert function pass!")
             else:
